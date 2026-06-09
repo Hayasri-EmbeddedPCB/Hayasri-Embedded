@@ -1,0 +1,11 @@
+#include <stdio.h>
+void cubeNum(int *x){
+    *x = (*x)*(*x)*(*x);
+}
+int main(){
+int  number = 3;
+printf("number before cube : %d\n",number);
+cubeNum(&number);
+printf("number after cube : %d\n",number);
+return 0;
+}
