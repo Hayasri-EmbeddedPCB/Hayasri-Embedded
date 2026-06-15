@@ -9,7 +9,8 @@
 - Functions - Call by Reference
 - 1D array
 - 2D array
-- String and Its functions 
+- String and Its functions
+- Pointers ans Arithmetic Pointers 
 
 ## Tools Used
 - Programiz Online C Compiler
