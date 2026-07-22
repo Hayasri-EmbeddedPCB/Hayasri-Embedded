@@ -1,4 +1,4 @@
-# 8051 Stepper Motor - Half Step Control
+# 8051 Stepper Motor - Half Step Control & Full Step Control
 
 ## Description
 Controls stepper motor in Half Step mode
