@@ -1,7 +1,6 @@
 # PIC16F877A - LED Blink (PORTB)
 
-## Description
-Idhu oru basic LED blinking program, PIC16F877A microcontroller ku, HI-TECH C compiler use panni eழுதapatta code. PORTB full ah output ah set panni, LED ah ON/OFF toggle pandrathu, software delay loop use panni.
+A basic LED blinking program for the PIC16F877A microcontroller, written in C using the HI-TECH C compiler. PORTB is configured as output and toggled ON/OFF using a software delay loop.
 
 ## Code
 
@@ -32,23 +31,20 @@ void main(){
 
 ## How It Works
 
-| Line | Ennanu Panuthu |
+| Line | What It Does |
 |---|---|
-| `#include<pic.h>` | HI-TECH C ku PIC register definitions kudukkura header file |
-| `#define led PORTB` | PORTB ku "led" nu oru easy-to-read name kudukkuthu |
-| `TRISB=0x00;` | PORTB full ah **output** mode ku set pannuthu (0 = output, 1 = input) |
-| `led=0;` | Start la PORTB ella pins um LOW (LED OFF) |
-| `delay()` function | Nested for-loop use panni oru software delay create pannuthu — CPU cycles busy ah irundhu time waste pannuthu, athanaala delay varuthu |
-| `while(1)` loop | Infinite loop — LED ON pannitu delay, appuram OFF pannitu delay, idha continuously repeat pannuthu |
+| `#include<pic.h>` | Header file that provides PIC register definitions for HI-TECH C |
+| `#define led PORTB` | Gives PORTB an easy-to-read alias, `led` |
+| `TRISB=0x00;` | Sets PORTB as **output** (0 = output, 1 = input) |
+| `led=0;` | Initializes all PORTB pins LOW (LEDs OFF) |
+| `delay()` function | A nested for-loop that creates a software delay by keeping the CPU busy for a period of time |
+| `while(1)` loop | Infinite loop — turns the LED ON, delays, turns it OFF, delays, and repeats |
 
-## Delay Calculation 
+## About the Delay
 
-`delay()` function la `i` 100 thadava, `j` 1275 thadava loop aaguthu — so total **100 × 1275 = 127,500 iterations**. 
+The `delay()` function loops `i` 100 times and `j` 1275 times per outer iteration — a total of **100 x 1275 = 127,500 iterations**. 
 
+- It's a **software delay**, not based on a hardware timer
+- Actual delay depends on the crystal frequency and compiler optimization level
+- For precise timing, use the Timer0/Timer1 modules instead
 
-
-
-
-- `_XTAL_FREQ` correct ah define panni, `__delay_ms()` built-in function use pannunga — more accurate & readable
-- Single LED (`RB0`) mattum toggle panna try pannunga, `RB0 = 1;` / `RB0 = 0;` mari
-- Timer0 interrupt use panni delay create pannunga — CPU busy-wait pannama
