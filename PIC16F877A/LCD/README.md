@@ -2,6 +2,10 @@
 
 Interfacing a 16x2 character LCD (HD44780-compatible) with the PIC16F877A in 8-bit mode, written in C using the HI-TECH C compiler. Displays two custom text strings on the LCD.
 
+## Output
+
+![LCD Output](LcdOutput.png)
+
 ## How It Works
 
 | Function | Purpose |
