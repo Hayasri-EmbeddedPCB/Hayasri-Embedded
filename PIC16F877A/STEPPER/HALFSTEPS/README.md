@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/e3062b1d-5270-41a4-805a-463ba70da387
+
 # PIC16F877A - Stepper Motor Control (Half Step)
 
 Smoother stepper motor rotation using the PIC16F877A, written in C using the HI-TECH C compiler. Uses an 8-step half-step sequence on PORTB — double the resolution of wave drive, with smoother, more precise rotation.
