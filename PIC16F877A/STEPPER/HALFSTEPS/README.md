@@ -40,6 +40,9 @@ The half-step sequence is built by interleaving the single-phase steps (`0x80, 0
 
 
 
+
+
+
 ## Tools Used
 
 - **IDE:** MPLAB IDE v8.63
