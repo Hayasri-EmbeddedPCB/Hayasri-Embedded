@@ -40,12 +40,7 @@ The half-step sequence is built by interleaving the single-phase steps (`0x80, 0
 - Try microstepping (PWM-based) for even finer resolution, if the driver supports it
 
 ## Demo
-
-
-
-
-
-
+#[HalfSteps.mp4]
 
 ## Tools Used
 
